@@ -1,4 +1,4 @@
-Utils Scripts for Mounting Object Storage
+Util Scripts for Mounting Object Storage
 ===================
 
 * install_s3cmd.sh 		-	Install [https://github.com/s3tools/s3cmd](s3cmd) from deb repository sources.
