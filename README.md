@@ -20,18 +20,18 @@ s3cmd基本用法有：
 	
 *	s3cmd ls 						-	列举全部bucket
 
-*	s3cmd ls s3://[Bucket]/[Prefix]	-	列举指定bucket下指定前缀的Object
+*	s3cmd ls s3://{Bucket}/{Prefix}	-	列举指定bucket下指定前缀的Object
 
-*	s3cmd mb s3://[Bucket]			-	创建bucket
+*	s3cmd mb s3://{Bucket}			-	创建bucket
 
-*	s3cmd rb s3://[Bucket]			-	删除bucket
+*	s3cmd rb s3://{Bucket}			-	删除bucket
 
 
 --------------------------------------------------------------------------------------------------------------
 
 挂载Bucket到本地目录：
 
-	./mount_s3fs.sh Bucket MountPoint [s3fs_option1] [s3fs_option2] ...]
+	./mount_s3fs.sh Bucket MountPoint [[s3fs_option1] [s3fs_option2] ...]
 
 使用s3fs进行挂载，默认指定了allow_other, use_path_request_style两个参数，其他s3fs的参数，可以在脚本第三个以后的参数指定。
 
