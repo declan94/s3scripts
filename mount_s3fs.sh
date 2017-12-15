@@ -14,14 +14,14 @@ function isDirEmpty()
 
 function ensureNotEmpty()
 {
-	read -p "Mount point [$1] is NOT EMPTY, continue to mount? [y/n]" ans
+	read -p "Mount point [$1] is NOT EMPTY, continue to mount? [y/n] " ans
 	[[ $ans == "y" || $ans == "Y" ]] && return 0
 	return 1
 }
 
 function ensureCreate()
 {
-	read -p "Mount point [$1] does not exist, create directory? [y/n]" ans
+	read -p "Mount point [$1] does not exist, create directory? [y/n] " ans
 	[[ $ans == "y" || $ans == "Y" ]] || return 1
 	mkdir -p $1
 }
@@ -47,7 +47,7 @@ function addPwdFile()
 
 function ensureS3fs()
 {
-	read -p "s3fs currently not installed, install it now? [y/n]" ans
+	read -p "s3fs currently not installed, install it now? [y/n] " ans
 	[[ $ans == "y" || $ans == "Y" ]] || return 1
 	$SCRIPT_DIR/install_s3fs.sh || return 1
 }

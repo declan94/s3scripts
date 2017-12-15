@@ -11,7 +11,9 @@ Util Scripts for Mounting Object Storage
 
 [https://github.com/s3tools/s3cmd](s3cmd) 可用来管理S3 Storage，./install_s3cmd.sh 进行安装，之后可以直接输入s3cmd查看用法。
 
-基本用法有：
+正式使用前还需要配置连接参数，可以使用./config_s3cmd.sh 方便的生成配置文件，根据提示输入参数即可。
+
+s3cmd基本用法有：
 	
 *	s3cmd ls 						-	列举全部bucket
 
