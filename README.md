@@ -33,7 +33,7 @@ s3cmd基本用法有：
 
 	./mount_s3fs.sh Bucket MountPoint [s3fs_option1] [s3fs_option2] ...]
 
-使用s3fs进行挂载，默认指定了allow_other, use_path_request_style和sigv2三个参数，其他s3fs的参数，可以在脚本第三个以后的参数指定。
+使用s3fs进行挂载，默认指定了allow_other, use_path_request_style两个参数，其他s3fs的参数，可以在脚本第三个以后的参数指定。
 
 如果s3fs未安装，会提醒是否自动安装，y/n选择。
 

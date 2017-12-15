@@ -4,7 +4,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE[0]}); pwd)
 
 useHttps="False"
-signV2="Yes"
+signV2="False"
 
 savePath="$(cd ~; pwd)/.s3cfg"
 

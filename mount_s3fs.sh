@@ -93,7 +93,6 @@ done
 
 options[${#options[*]}]="allow_other"
 options[${#options[*]}]="use_path_request_style"
-options[${#options[*]}]="sigv2"
 
 if [[ -d $MountPoint ]]; then
 	isDirEmpty $MountPoint || ensureNotEmpty $MountPoint || exit 1
