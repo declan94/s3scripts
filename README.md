@@ -10,11 +10,17 @@ Utils Scripts for Mounting Object Storage
 
 
 [https://github.com/s3tools/s3cmd](s3cmd) 可用来管理S3 Storage，./install_s3cmd.sh 进行安装，之后可以直接输入s3cmd查看用法。
+
 基本用法有：
-	s3cmd ls 						-	列举全部bucket
-	s3cmd ls s3://[Bucket]/[Prefix]	-	列举指定bucket下指定前缀的Object
-	s3cmd mb s3://[Bucket]			-	创建bucket
-	s3cmd rb s3://[Bucket]			-	删除bucket
+	
+*	s3cmd ls 						-	列举全部bucket
+
+*	s3cmd ls s3://[Bucket]/[Prefix]	-	列举指定bucket下指定前缀的Object
+
+*	s3cmd mb s3://[Bucket]			-	创建bucket
+
+*	s3cmd rb s3://[Bucket]			-	删除bucket
+
 
 --------------------------------------------------------------------------------------------------------------
 
@@ -26,7 +32,8 @@ Utils Scripts for Mounting Object Storage
 
 如果MountPoint非空，会提醒是否继续挂载，y/n选择。
 
-之后要输入服务器地址，如果是https协议连接，输入https://[ServerUrl]，否则默认http协议连接。
+之后要输入服务器地址，如果是https协议连接，输入https://[ServerUrl]，
+否则默认http协议连接。
 
 然后输入Access Key和Key Secret
 
