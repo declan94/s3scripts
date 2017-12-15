@@ -53,6 +53,7 @@ function ensureS3fs()
 	read -p "s3fs currently not installed, install it now? [y/n] " ans
 	[[ $ans == "y" || $ans == "Y" ]] || return 1
 	$SCRIPT_DIR/install_s3fs.sh || return 1
+	s3fsCmd=`which s3fs`
 }
 
 function get_fullpath()
@@ -126,7 +127,7 @@ sudo $cmd || exit 1
 
 echo "Mount Succeeded!"
 read -p "Write to /etc/fstab? [y/n]" ans
-[[ $ans == "y" || $ans == "Y" ]] || return 0
+[[ $ans == "y" || $ans == "Y" ]] || exit 0
 
 fstabLine="$s3fsCmd#$BucketName $MountPoint fuse _netdev"
 for opt in ${options[*]}; do
