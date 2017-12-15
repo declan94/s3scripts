@@ -80,6 +80,9 @@ if [[ -z $s3fsCmd ]]; then
 fi
 
 BucketName=$1
+if [[ ${BucketName:0:5} == "s3://" ]]; then
+	BucketName=${BucketName:5}
+fi
 shift
 MountPoint=$1
 shift
@@ -124,6 +127,8 @@ done
 
 echo $cmd
 sudo $cmd || exit 1
+
+ret=`sudo df | grep $MountPoint`
 
 echo "Mount Succeeded!"
 read -p "Write to /etc/fstab? [y/n]" ans
