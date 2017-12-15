@@ -31,7 +31,9 @@ s3cmd基本用法有：
 
 挂载Bucket到本地目录：
 
-	./mount_s3fs.sh [Bucket] [MountPoint]	
+	./mount_s3fs.sh Bucket MountPoint [s3fs_option1] [s3fs_option2] ...]
+
+使用s3fs进行挂载，默认指定了allow_other, use_path_request_style和sigv2三个参数，其他s3fs的参数，可以在脚本第三个以后的参数指定。
 
 如果s3fs未安装，会提醒是否自动安装，y/n选择。
 
@@ -39,10 +41,10 @@ s3cmd基本用法有：
 
 如果MountPoint非空，会提醒是否继续挂载，y/n选择。
 
-之后要输入服务器地址，如果是https协议连接，输入https://[ServerUrl]
+如果未指定s3fs的url参数，会提示输入服务器地址，如果是https协议连接，输入https://[ServerUrl]
 ，否则默认http协议连接。
 
-然后输入Access Key和Key Secret
+如果未指定passwd_file参数，会提示输入Access Key和Key Secret，自动生成passwd_file。
 
 挂载成功后可以选择将挂载信息写入/etc/fstab，以后启动会自动挂载
 
