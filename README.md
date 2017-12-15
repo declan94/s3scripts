@@ -20,11 +20,11 @@ s3cmd基本用法有：
 	
 *	s3cmd ls 						-	列举全部bucket
 
-*	s3cmd ls s3://{Bucket}/{Prefix}	-	列举指定bucket下指定前缀的Object
+*	s3cmd ls s3://[Bucket]/[Prefix]	-	列举指定bucket下指定前缀的Object
 
-*	s3cmd mb s3://{Bucket}			-	创建bucket
+*	s3cmd mb s3://[Bucket]			-	创建bucket
 
-*	s3cmd rb s3://{Bucket}			-	删除bucket
+*	s3cmd rb s3://[Bucket]			-	删除bucket
 
 
 --------------------------------------------------------------------------------------------------------------
