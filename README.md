@@ -1,7 +1,7 @@
 Util Scripts for Mounting Object Storage (S3)
 ===================
 
-These util scripts are used for conveniently mounting object storage with s3 interfaces.
+These util scripts are used for conveniently mounting object storage with s3 interfaces on Ubuntu.
 
 * install_s3cmd.sh 		-	Install [https://github.com/s3tools/s3cmd](s3cmd) from deb repository sources.
 * install_s3fs.sh 		- 	Install [https://github.com/s3fs-fuse/s3fs-fuse](s3fs) from github.
