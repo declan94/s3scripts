@@ -3,8 +3,8 @@ Util Scripts for Mounting Object Storage (S3)
 
 These util scripts are used for conveniently mounting object storage with s3 interfaces on Ubuntu.
 
-* install_s3cmd.sh 		-	Install [https://github.com/s3tools/s3cmd](s3cmd) from deb repository sources.
-* install_s3fs.sh 		- 	Install [https://github.com/s3fs-fuse/s3fs-fuse](s3fs) from github.
+* install_s3cmd.sh 		-	Install [s3cmd](https://github.com/s3tools/s3cmd) from deb repository sources.
+* install_s3fs.sh 		- 	Install [s3fs](https://github.com/s3fs-fuse/s3fs-fuse) from github.
 * config_s3cmd.sh 		-	Generate s3cmd configuration file.
 * mount_s3fs.sh 		-	Mount S3 Storage Bucket
 
@@ -12,7 +12,7 @@ These util scripts are used for conveniently mounting object storage with s3 int
 # Usage:
 
 
-[https://github.com/s3tools/s3cmd](s3cmd) 可用来管理S3 Storage，./install_s3cmd.sh 进行安装，之后可以直接输入s3cmd查看用法。
+[s3cmd](https://github.com/s3tools/s3cmd) 可用来管理S3 Storage，./install_s3cmd.sh 进行安装，之后可以直接输入s3cmd查看用法。
 
 正式使用前还需要配置连接参数，可以使用./config_s3cmd.sh 方便的生成配置文件，根据提示输入参数即可。
 
@@ -33,12 +33,14 @@ s3cmd基本用法有：
 
 	./mount_s3fs.sh [Bucket] [MountPoint]	
 
+如果s3fs未安装，会提醒是否自动安装，y/n选择。
+
 如果MountPoint不存在，会提醒是否新建本地目录，y/n选择。
 
 如果MountPoint非空，会提醒是否继续挂载，y/n选择。
 
-之后要输入服务器地址，如果是https协议连接，输入https://[ServerUrl]，
-否则默认http协议连接。
+之后要输入服务器地址，如果是https协议连接，输入https://[ServerUrl]
+，否则默认http协议连接。
 
 然后输入Access Key和Key Secret
 
